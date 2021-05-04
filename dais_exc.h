@@ -41,6 +41,10 @@ struct unable_to_read_file{
     string code = "007";   
 };
 
+struct filter_odd_dimensions{
+    string msg = "The (width and height) dimensions of the filter must be odd";
+    string code = "008";   
+};
 
 
 #endif
