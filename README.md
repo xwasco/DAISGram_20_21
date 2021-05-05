@@ -37,6 +37,6 @@ Primo Piano | Sfondo | GreenScreen
 ------------ | ------------- | -------------
 ![DAIS](https://github.com/xwasco/DAISGram_20_21/blob/main/images/greenscreen/gs_2.bmp) | ![DAIS+20](https://github.com/xwasco/DAISGram_20_21/blob/main/images/greenscreen/gs_2_bkg.bmp) | ![DAIS+100](https://github.com/xwasco/DAISGram_20_21/blob/main/results/greenscreen/dais_matrix.bmp)
  | | | RGB={144, 208, 49}, threshold={100, 100, 50}
- ------------ | ------------- | -------------
+ |  |  | 
 ![DAIS](https://github.com/xwasco/DAISGram_20_21/blob/main/images/greenscreen/gs_4.bmp) | ![DAIS+20](https://github.com/xwasco/DAISGram_20_21/blob/main/images/greenscreen/gs_4_bkg.bmp) | ![DAIS+100](https://github.com/xwasco/DAISGram_20_21/blob/main/results/greenscreen/seba_flower.bmp)
  | | | RGB={226,225,220}, threshold={50,50,50}
