@@ -14,9 +14,9 @@ Immagine | Smooth (h=3) | Smooth (h=5) | Smooth (h=7)
 ------------ | ------------- | ------------- | ------------- 
 ![DAIS](https://github.com/xwasco/DAISGram_20_21/blob/main/images/dais.bmp) | ![DAIS+100](https://github.com/xwasco/DAISGram_20_21/blob/main/results/dais_smooth_3.bmp) | ![DAIS+100](https://github.com/xwasco/DAISGram_20_21/blob/main/results/dais_smooth_5.bmp) | ![DAIS+100](https://github.com/xwasco/DAISGram_20_21/blob/main/results/dais_smooth_7.bmp) 
 
-Immagine | Sharp | Warhol | Equalize
+Immagine | Sharp | Edge | Warhol
 ------------ | ------------- | ------------- | ------------- 
-![DAIS](https://github.com/xwasco/DAISGram_20_21/blob/main/images/dais.bmp) | ![DAIS+20](https://github.com/xwasco/DAISGram_20_21/blob/main/results/dais_sharp.bmp) | ![DAIS+100](https://github.com/xwasco/DAISGram_20_21/blob/main/results/dais_warhol.bmp) | ![DAIS+100](https://github.com/xwasco/DAISGram_20_21/blob/main/results/dais_equalize.bmp) |
+![DAIS](https://github.com/xwasco/DAISGram_20_21/blob/main/images/dais.bmp) | ![DAIS+20](https://github.com/xwasco/DAISGram_20_21/blob/main/results/dais_sharp.bmp) | ![DAIS+100](https://github.com/xwasco/DAISGram_20_21/blob/main/results/dais_edge.bmp) | ![DAIS+100](https://github.com/xwasco/DAISGram_20_21/blob/main/results/dais_warhol.bmp) | 
 
 Immagine A | Immagine B | Blend alpha=0 | alpha=0.25 | alpha=0.5 | alpha=0.75 | alpha=1.00
 ------------ | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- 
