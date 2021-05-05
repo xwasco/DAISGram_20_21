@@ -36,4 +36,4 @@ Immagine A | Immagine B | Blend alpha=0 | alpha=0.25 | alpha=0.5 | alpha=0.75 | 
 Primo Piano | Sfondo | GreenScreen
 ------------ | ------------- | -------------
 ![DAIS](https://github.com/xwasco/DAISGram_20_21/blob/main/images/greenscreen/gs_2.bmp) | ![DAIS+20](https://github.com/xwasco/DAISGram_20_21/blob/main/images/greenscreen/gs_2_bkg.bmp) | ![DAIS+100](https://github.com/xwasco/DAISGram_20_21/blob/main/results/greenscreen/dais_matrix.bmp)
- | | RGB={144, 208, 49}, threshold={100, 100, 50}
+ | | | RGB={144, 208, 49}, threshold={100, 100, 50}
