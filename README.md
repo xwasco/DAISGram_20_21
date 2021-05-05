@@ -11,10 +11,11 @@ Se tutto è andato bene dovrebbe generare una scacchiera.
 
 ![Checkboard](https://github.com/xwasco/DAISGram_20_21/blob/main/checkboard.bmp)
 
-## Risultati Attesi
+# Risultati Attesi
 La cartella `images` contiene alcune immagini con cui potete provare la vostra implementazione.
 
-Nella cartella `results` trovate invece i risultati attesi dai seguenti metodi.
+Nella cartella `results` trovate invece i risultati attesi.
+
 Immagine | Brighten (+20) | Brighten (+100) | Grayscale
 ------------ | ------------- | ------------- |-------------
 ![DAIS](https://github.com/xwasco/DAISGram_20_21/blob/main/images/dais.bmp) | ![DAIS+20](https://github.com/xwasco/DAISGram_20_21/blob/main/results/dais_brighten_20.bmp) | ![DAIS+100](https://github.com/xwasco/DAISGram_20_21/blob/main/results/dais_brighten_100.bmp) | ![DAIS+100](https://github.com/xwasco/DAISGram_20_21/blob/main/results/dais_gray.bmp) 
