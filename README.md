@@ -6,9 +6,9 @@ I dettagli del progetto sono visibili [qui](https://docs.google.com/document/d/1
 La cartella `images` contiene alcune immagini con cui potete provare la vostra implementazione.
 
 Nella cartella `results` trovate invece i risultati attesi dai seguenti metodi.
-Immagine | Brighten (+20) | Brighten (+100) 
+Immagine | Brighten (+20) | Brighten (+100) | Grayscale
 ------------ | ------------- | -------------
-![DAIS](https://github.com/xwasco/DAISGram_20_21/blob/main/images/dais.bmp) | ![Image of Yaktocat](https://github.com/xwasco/DAISGram_20_21/blob/main/results/dais_brighten_20.bmp) | ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![DAIS](https://github.com/xwasco/DAISGram_20_21/blob/main/images/dais.bmp) | ![DAIS+20](https://github.com/xwasco/DAISGram_20_21/blob/main/results/dais_brighten_20.bmp) | ![DAIS+100](https://github.com/xwasco/DAISGram_20_21/blob/main/results/dais_brighten_100.bmp) | ![DAIS+100](https://github.com/xwasco/DAISGram_20_21/blob/main/results/dais_gray.bmp) 
 Content from cell 1 | Content from cell 2 | asdasdasd
 Content in the first column | Content in the second column | asda sdads
 
