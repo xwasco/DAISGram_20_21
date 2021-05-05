@@ -8,7 +8,7 @@ La cartella `images` contiene alcune immagini con cui potete provare la vostra i
 Nella cartella `results` trovate invece i risultati attesi dai seguenti metodi.
 Immagine | Brighten (+20) | Brighten (+100) 
 ------------ | ------------- | -------------
-![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png) | ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png) | ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
+![DAIS](https://github.com/xwasco/DAISGram_20_21/blob/main/images/dais.bmp) | ![Image of Yaktocat](https://github.com/xwasco/DAISGram_20_21/blob/main/results/dais_brighten_20.bmp) | ![Image of Yaktocat](https://octodex.github.com/images/yaktocat.png)
 Content from cell 1 | Content from cell 2 | asdasdasd
 Content in the first column | Content in the second column | asda sdads
 
