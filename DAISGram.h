@@ -137,6 +137,8 @@ class DAISGram{
          *    -1  5 -1
          *    0  -1  0
          *  
+         * Before returning the image, the corresponding tensor should be clamped in [0,255]
+         *  
          * @return returns a new DAISGram containing the modified object
          */
         DAISGram sharpen();
@@ -151,6 +153,8 @@ class DAISGram{
          *    -2 -1  0
          *    -1  1  1
          *     0  1  2
+         *  
+         * Before returning the image, the corresponding tensor should be clamped in [0,255]
          *  
          * @return returns a new DAISGram containing the modified object
          */
@@ -186,7 +190,9 @@ class DAISGram{
          * -1   8  -1
          * -1  -1  -1
          * 
-         * Remeber to convert the image to grayscale before running the convolution.
+         * Remember to convert the image to grayscale before running the convolution.
+         * 
+         * Before returning the image, the corresponding tensor should be clamped in [0,255]
          *  
          * @return returns a new DAISGram containing the modified object
          */  
