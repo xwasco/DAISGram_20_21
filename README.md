@@ -18,9 +18,12 @@ Immagine | Sharp | Warhol | Equalize
 ------------ | ------------- | ------------- |------------- 
 ![DAIS](https://github.com/xwasco/DAISGram_20_21/blob/main/images/dais.bmp) | ![DAIS+20](https://github.com/xwasco/DAISGram_20_21/blob/main/results/dais_sharp.bmp) | ![DAIS+100](https://github.com/xwasco/DAISGram_20_21/blob/main/results/dais_warhol.bmp) | ![DAIS+100](https://github.com/xwasco/DAISGram_20_21/blob/main/results/dais_equalize.bmp) |
 
-Immagine A | Immagine B | Blend ([](https://render.githubusercontent.com/render/math?math=%5Calpha%20%3D%200) | Warhol
+Immagine A | Immagine B | Blend ![blend](https://render.githubusercontent.com/render/math?math=%5Calpha%20%3D%200) | ![blend](https://render.githubusercontent.com/render/math?math=%5Calpha%20%3D%200.25)
 ------------ | ------------- | ------------- |------------- 
-![DAIS](https://github.com/xwasco/DAISGram_20_21/blob/main/images/dais.bmp) | ![DAIS+20](https://github.com/xwasco/DAISGram_20_21/blob/main/results/dais_sharp.bmp) | ![DAIS+100](https://github.com/xwasco/DAISGram_20_21/blob/main/results/dais_warhol.bmp) | ![DAIS+100](https://github.com/xwasco/DAISGram_20_21/blob/main/results/dais_equalize.bmp) |
+![DAIS](https://github.com/xwasco/DAISGram_20_21/blob/main/images/blend/blend_a.bmp) | 
+![DAIS](https://github.com/xwasco/DAISGram_20_21/blob/main/images/blend/blend_b.bmp) |
+![DAIS](https://github.com/xwasco/DAISGram_20_21/blob/main/results/blend/blend_0.00.bmp) | 
+![DAIS](https://github.com/xwasco/DAISGram_20_21/blob/main/results/blend/blend_0.25.bmp) | 
 
 ## Libreria per BMP
 Per testare il corretto funzionamento della libreria (libbmp) dovete lanciare il comando `make testbmp` e successivamente `./test_bmp`.
