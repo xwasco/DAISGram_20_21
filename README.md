@@ -3,6 +3,15 @@ Repository per il progetto di Laboratorio di Programmazione A.A. 2020-2021
 
 I dettagli del progetto sono visibili [qui](https://docs.google.com/document/d/1G9mSJaCNfDTd1uzwQlgYWjXfUNXsz7EzLuoDCranRHU/edit#)
 
+
+## Libreria per BMP
+Per testare il corretto funzionamento della libreria (libbmp) dovete lanciare il comando `make testbmp` e successivamente `./test_bmp`.
+
+Se tutto è andato bene dovrebbe generare una scacchiera.
+
+![Checkboard](https://github.com/xwasco/DAISGram_20_21/blob/main/checkboard.bmp)
+
+## Risultati Attesi
 La cartella `images` contiene alcune immagini con cui potete provare la vostra implementazione.
 
 Nella cartella `results` trovate invece i risultati attesi dai seguenti metodi.
@@ -22,9 +31,9 @@ Immagine A | Immagine B | Blend alpha=0 | alpha=0.25 | alpha=0.5 | alpha=0.75 | 
 ------------ | ------------- | ------------- | ------------- | ------------- | ------------- | ------------- 
 ![DAIS](https://github.com/xwasco/DAISGram_20_21/blob/main/images/blend/blend_a.bmp) | ![DAIS](https://github.com/xwasco/DAISGram_20_21/blob/main/images/blend/blend_b.bmp) | ![DAIS](https://github.com/xwasco/DAISGram_20_21/blob/main/results/blend/blend_0.00.bmp) | ![DAIS](https://github.com/xwasco/DAISGram_20_21/blob/main/results/blend/blend_0.25.bmp) | ![DAIS](https://github.com/xwasco/DAISGram_20_21/blob/main/results/blend/blend_0.50.bmp) | ![DAIS](https://github.com/xwasco/DAISGram_20_21/blob/main/results/blend/blend_0.75.bmp) | ![DAIS](https://github.com/xwasco/DAISGram_20_21/blob/main/results/blend/blend_1.00.bmp) 
 
-## Libreria per BMP
-Per testare il corretto funzionamento della libreria (libbmp) dovete lanciare il comando `make testbmp` e successivamente `./test_bmp`.
-
-Se tutto è andato bene dovrebbe generare una scacchiera.
-
-![Checkboard](https://github.com/xwasco/DAISGram_20_21/blob/main/checkboard.bmp)
+# Parti Opzionali
+## Green Screen
+Primo Piano | Sfondo | GreenScreen
+------------ | ------------- | -------------
+![DAIS](https://github.com/xwasco/DAISGram_20_21/blob/main/images/greenscreen/gs_2.bmp) | ![DAIS+20](https://github.com/xwasco/DAISGram_20_21/blob/main/images/greenscreen/gs_2_bkg.bmp) | ![DAIS+100](https://github.com/xwasco/DAISGram_20_21/blob/main/results/greenscreen/dais_matrix.bmp)
+ | | RGB={144, 208, 49}, threshold={100, 100, 50}
