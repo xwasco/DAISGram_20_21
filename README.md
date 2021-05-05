@@ -40,3 +40,8 @@ Primo Piano | Sfondo | GreenScreen
  |  |  | 
 ![DAIS](https://github.com/xwasco/DAISGram_20_21/blob/main/images/greenscreen/gs_4.bmp) | ![DAIS+20](https://github.com/xwasco/DAISGram_20_21/blob/main/images/greenscreen/gs_4_bkg.bmp) | ![DAIS+100](https://github.com/xwasco/DAISGram_20_21/blob/main/results/greenscreen/seba_flower.bmp)
  | | | RGB={226,225,220}, threshold={50,50,50}
+ 
+ ## Equalizzazione dell'istogramma
+ Immagine Originale | Equalizzata
+------------ | -------------
+![DAIS](https://github.com/xwasco/DAISGram_20_21/blob/main/images/fullmoon.bmp) | ![DAIS+20](https://github.com/xwasco/DAISGram_20_21/blob/main/results/fullmoon_equalize.bmp)
