@@ -9,12 +9,7 @@ void show_help(){
     printf("\targ 2: input file name (tensor2) \n");
     printf("\targ 3: operazione da effettuare (+,-,/,*,convolve, concat)\n");
     printf("\targ 4: output file name\n");
-    printf("\targ 5: Diversi significati in funzione dell'operazione (default 3):\n"
-           "\t\t- [smooth]: kernel size \n"
-           "\t\t- [brighten]: valore bright per aumentare la luminosità \n"
-           "\t\t\n");
-    printf("\targ 6: Diversi significati in funzione dell'operazione (default 1.0):\n"
-           "\t\t- [blend] parametro alpha per il blending di due immagini"); 
+    printf("\targ 5: parametro axis della concat\n");
     printf("\n");
 }
 
@@ -25,7 +20,7 @@ int main (int argc, char * argv[]) {
     char * operation; /* operazione da eseguire */
     char * fn_out; /* output file */
 
-    int axis = 3; /* axis for concat */
+    int axis = 0; /* axis for concat */
 
     /* variabili di appoggio per le computazioni */
     Tensor a,b,out;
@@ -48,17 +43,17 @@ int main (int argc, char * argv[]) {
     b.read_file(fn_in_2);
     
     if (strcmp(operation, "+") == 0) {
-        out=a+b; /* aumenta la luminosità */
+        out=a+b; 
     }else if(strcmp(operation, "-") == 0) {
-        out=a-b; /* aumenta la luminosità */
+        out=a-b; 
     }else if(strcmp(operation, "*") == 0) {
-        out=a*b; /* aumenta la luminosità */
-    }else if(strcmp(operation, "/") == 0) {
-        out=a/b; /* aumenta la luminosità */
+        out=a*b; 
     }else if(strcmp(operation, "convolve") == 0) {
-        out=a.convolve(b); /* aumenta la luminosità */
+        out=a.convolve(b); 
     }else if(strcmp(operation, "concat") == 0) {
-        out=a.concat(b,axis); /* aumenta la luminosità */
+        out=a.concat(b,axis); 
+    }else if(strcmp(operation, "/") == 0) {
+        out=a/b; 
     }else {
         throw(unknown_operation());
     }
