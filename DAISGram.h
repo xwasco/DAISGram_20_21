@@ -18,33 +18,16 @@ class DAISGram{
 
     public:
 
-        DAISGram(){}
+        DAISGram();
 
-        ~DAISGram(){}
+        ~DAISGram();
 
         /**
          * Load a bitmap from file
          *
          * @param filename String containing the path of the file
          */
-        void load_image(string filename){
-            BmpImg img = BmpImg();
-
-        	img.read(filename.c_str());
-
-            const int h = img.get_height();
-            const int w = img.get_width();
-
-            data = Tensor(h, w, 3, 0.0);
-
-            for(int i=0;i<img.get_height();i++){
-                for(int j=0;j<img.get_width();j++){ 
-                    data(i,j,0) = (float) img.red_at(j,i);
-                    data(i,j,1) = (float) img.green_at(j,i);    
-                    data(i,j,2) = (float) img.blue_at(j,i);   
-                }                
-            }
-        }
+        void load_image(string filename);
 
 
         /**
@@ -54,23 +37,7 @@ class DAISGram{
          *
          * @param filename String containing the path where to store the image.
          */
-        void save_image(string filename){
-
-            data.clamp(0,255);
-
-            BmpImg img = BmpImg(getCols(), getRows());
-
-            img.init(getCols(), getRows());
-
-            for(int i=0;i<getRows();i++){
-                for(int j=0;j<getCols();j++){
-                    img.set_pixel(j,i,(unsigned char) data(i,j,0),(unsigned char) data(i,j,1),(unsigned char) data(i,j,2));                   
-                }                
-            }
-
-            img.write(filename);
-
-        }
+        void save_image(string filename);
 
         /**
          * Get rows
@@ -97,6 +64,8 @@ class DAISGram{
          * Brighten the image
          * 
          * It sums the bright variable to all the values in the image.
+         * 
+         * Before returning the image, the corresponding tensor should be clamped in [0,255]
          * 
          * @param bright the amount of bright to add (if negative the image gets darker)
          * @return returns a new DAISGram containing the modified object
@@ -138,7 +107,7 @@ class DAISGram{
          *    0  -1  0
          *  
          * Before returning the image, the corresponding tensor should be clamped in [0,255]
-         *  
+         * 
          * @return returns a new DAISGram containing the modified object
          */
         DAISGram sharpen();
@@ -153,7 +122,7 @@ class DAISGram{
          *    -2 -1  0
          *    -1  1  1
          *     0  1  2
-         *  
+         * 
          * Before returning the image, the corresponding tensor should be clamped in [0,255]
          *  
          * @return returns a new DAISGram containing the modified object
@@ -176,7 +145,7 @@ class DAISGram{
          * @param h the size of the filter
          * @return returns a new DAISGram containing the modified object
          */
-        DAISGram smooth(int h=3); 
+        DAISGram smooth(int h=3);
 
         /**
          * Edges of an image
@@ -190,13 +159,13 @@ class DAISGram{
          * -1   8  -1
          * -1  -1  -1
          * 
-         * Remember to convert the image to grayscale before running the convolution.
+         * Remeber to convert the image to grayscale before running the convolution.
          * 
          * Before returning the image, the corresponding tensor should be clamped in [0,255]
          *  
          * @return returns a new DAISGram containing the modified object
          */  
-        DAISGram edge();   
+        DAISGram edge();
 
         /**
          * Blend with anoter image
@@ -213,12 +182,12 @@ class DAISGram{
          * @param alpha The parameter of the convex combination  
          * @return returns a new DAISGram containing the blending of the two images.
          */  
-        DAISGram blend(DAISGram rhs, float alpha);
+        DAISGram blend(const DAISGram & rhs, float alpha=0.5);
 
         /**
          * Green Screen
          * 
-         * This function substitutes a pixe with the corresponding one in a background image 
+         * This function substitutes a pixel with the corresponding one in a background image 
          * if its colors are in the surrounding (+- threshold) of a given color (rgb).
          * 
          * (rgb - threshold) <= pixel <= (rgb + threshold)
@@ -253,12 +222,7 @@ class DAISGram{
          * @param d number of channels
          * @return returns a new DAISGram containing the generated image.
          */  
-        void generate_random(int h, int w, int d){
-            data = Tensor(h,w,d,0.0);
-            data.init_random(128,30);
-            data.rescale(255);
-        }
-
+        void generate_random(int h, int w, int d);
 };
 
 #endif

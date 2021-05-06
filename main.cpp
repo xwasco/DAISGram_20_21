@@ -58,6 +58,7 @@ int main (int argc, char * argv[]) {
         img = b.brighten(k_size); /* aumenta la luminosità */
     }
     else if (strcmp(operation, "blend") == 0) {
+        cout<<alpha<<endl;
         c.load_image(fn_in_2);        
         img = b.blend(c, alpha); /* effettua il blending di due immagini */
     }else if (strcmp(operation, "gray") == 0) {
