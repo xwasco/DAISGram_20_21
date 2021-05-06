@@ -3,8 +3,6 @@ Repository per il progetto di Laboratorio di Programmazione A.A. 2020-2021
 
 I dettagli del progetto sono visibili [qui](https://docs.google.com/document/d/1G9mSJaCNfDTd1uzwQlgYWjXfUNXsz7EzLuoDCranRHU/edit#)
 
-La composizione dei gruppi invece è a [questo foglio](https://docs.google.com/spreadsheets/d/1oAY-lWT7S9lwcnfZ0ncD7lZIeZl01kDjGVEBeHfo7nA/edit#gid=0)
-
 ## Libreria per BMP
 Per testare il corretto funzionamento della libreria (libbmp) dovete lanciare il comando `make testbmp` e successivamente `./test_bmp`.
 
