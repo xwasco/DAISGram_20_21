@@ -19,7 +19,7 @@ class Tensor
 {
 private:
 
-    float * data = nullptr;
+    float * data = nullptr; //<-- you are free to change this data structure (don't use vectors)
 
     int r = 0;  // number of rows
     int c = 0;  // number of columns
@@ -85,6 +85,7 @@ public:
      * @return the new Tensor
      */
     Tensor(const Tensor& that);
+
 
     /**
      * Operator overloading -
