@@ -54,6 +54,8 @@ public:
      */
     ~Tensor();
 
+    void init_progressive();
+
     /**
      * Operator overloading ()
      * 
@@ -87,103 +89,97 @@ public:
     /**
      * Operator overloading -
      * 
-     * Perform the point-wise difference between two Tensors.
+     * It performs the point-wise difference between two Tensors.
      * 
-     * lhs(i,j,k)=lhs(i,j,k)-rhs(i,j,k)
+     * result(i,j,k)=this(i,j,k)-rhs(i,j,k)
      * 
+     * The two tensors must have the same size otherwise throw a dimension_mismatch()
      * 
-     * @return lhs with the result of the operation (lhs is passed by copy, so is a new lhs ;) )
+     * @return returns a new Tensor containing the result of the operation
      */
-
     Tensor operator-(const Tensor &rhs);
-    /**
+    
+     /**
      * Operator overloading +
      * 
-     * Perform the point-wise difference between two Tensors.
+     * It performs the point-wise sum between two Tensors.
      * 
-     * lhs(i,j,k)=lhs(i,j,k)+rhs(i,j,k)
+     * result(i,j,k)=this(i,j,k)+rhs(i,j,k)
      * 
+     * The two tensors must have the same size otherwise throw a dimension_mismatch()
      * 
-     * @return lhs with the result of the operation (lhs is passed by copy, so is a new lhs ;) )
-     */
-
+     * @return returns a new Tensor containing the result of the operation
+    */
     Tensor operator +(const Tensor &rhs);
+
     /**
      * Operator overloading *
      * 
-     * Perform the point-wise difference between two Tensors.
+     * It performs the point-wise product between two Tensors.
      * 
-     * lhs(i,j,k)=lhs(i,j,k)*rhs(i,j,k)
+     * result(i,j,k)=this(i,j,k)*rhs(i,j,k)
      * 
+     * The two tensors must have the same size otherwise throw a dimension_mismatch()
      * 
-     * @return lhs with the result of the operation (lhs is passed by copy, so is a new lhs ;) )
+     * @return returns a new Tensor containing the result of the operation
      */
-
     Tensor operator*(const Tensor &rhs);
     
     /**
      * Operator overloading /
      * 
-     * Perform the point-wise difference between two Tensors.
+     * It performs the point-wise division between two Tensors.
      * 
-     * lhs(i,j,k)=lhs(i,j,k)/rhs(i,j,k)
+     * result(i,j,k)=this(i,j,k)/rhs(i,j,k)
      * 
+     * The two tensors must have the same size otherwise throw a dimension_mismatch()
      * 
-     * @return lhs with the result of the operation (lhs is passed by copy, so is a new lhs ;) )
+     * @return returns a new Tensor containing the result of the operation
      */
-
     Tensor operator/(const Tensor &rhs);
 
     /**
-     * Operator overloading - between a Tensor and a constant
+     * Operator overloading - 
      * 
-     * Perform the point-wise difference between two Tensors.
+     * It performs the point-wise difference between a Tensor and a constant
      * 
-     * lhs(i,j,k)=lhs(i,j,k)-rhs
+     * result(i,j,k)=this(i,j,k)-rhs
      * 
-     * 
-     * @return lhs with the result of the operation (lhs is passed by copy, so is a new lhs ;) )
+     * @return returns a new Tensor containing the result of the operation
      */
-
     Tensor operator-(const float &rhs);
 
     /**
-     * Operator overloading + between a Tensor and a constant
+     * Operator overloading +
      * 
-     * Perform the point-wise difference between two Tensors.
+     * It performs the point-wise sum between a Tensor and a constant
      * 
-     * lhs(i,j,k)=lhs(i,j,k)+rhs
+     * result(i,j,k)=this(i,j,k)+rhs
      * 
-     * 
-     * @return lhs with the result of the operation (lhs is passed by copy, so is a new lhs ;) )
+     * @return returns a new Tensor containing the result of the operation
      */
-
     Tensor operator+(const float &rhs);
 
     /**
-     * Operator overloading * between a Tensor and a constant
+     * Operator overloading *
      * 
-     * Perform the point-wise difference between two Tensors.
+     * It performs the point-wise product between a Tensor and a constant
      * 
-     * lhs(i,j,k)=lhs(i,j,k)*rhs
+     * result(i,j,k)=this(i,j,k)*rhs
      * 
-     * 
-     * @return lhs with the result of the operation (lhs is passed by copy, so is a new lhs ;) )
+     * @return returns a new Tensor containing the result of the operation
      */
-
     Tensor operator*(const float &rhs);
 
     /**
      * Operator overloading / between a Tensor and a constant
      * 
-     * Perform the point-wise difference between two Tensors.
+     * It performs the point-wise division between a Tensor and a constant
      * 
-     * lhs(i,j,k)=lhs(i,j,k)/rhs
+     * result(i,j,k)=this(i,j,k)/rhs
      * 
-     * 
-     * @return lhs with the result of the operation (lhs is passed by copy, so is a new lhs ;) )
+     * @return returns a new Tensor containing the result of the operation
      */
-
     Tensor operator/(const float &rhs);
 
     /**
@@ -191,7 +187,7 @@ public:
      * 
      * Perform the assignment between this object and another
      * 
-     * @return a pointer to the receiver object
+     * @return a reference to the receiver object
      */
     Tensor & operator=(const Tensor &other);
 
@@ -342,6 +338,7 @@ public:
      * @return the minimum of data( , , k)
      */
     float getMin(int k);
+
     /** 
      * Get maximum 
      * 
@@ -353,7 +350,12 @@ public:
 
     /** 
      * showSize
-     * shows the dimensions of the tensor
+     * 
+     * shows the dimensions of the tensor on the standard output.
+     * 
+     * The format is the following:
+     * rows" x "colums" x "depth
+     * 
      */
     void showSize();
     
@@ -364,8 +366,12 @@ public:
      * 
      * Use the overaloading of << to show the content of the tensor.
      * 
-     * The content is shown considering each data( , , k).
+     * You are free to chose the output format, btw we suggest you to show the tensor by layer.
      * 
+     * [..., ..., 0]
+     * [..., ..., 1]
+     * ...
+     * [..., ..., k]
      */
     friend ostream& operator<< (ostream& stream, const Tensor & obj);
 
