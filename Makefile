@@ -1,24 +1,28 @@
 MAIN = main
+FLAGS = -std=c++11 -lm -O3
 
-all: main
+all: testbmp main main_tensor
 
-debug: FLAGS=-Wall -g
+debug: FLAGS=-g
 debug: main
 
-tensor.o: tensor.h
-	g++ tensor.h -o tensor.o -O1 -c $(FLAGS)
+tensor.o: tensor.cpp
+	g++ tensor.cpp -o tensor.o -c $(FLAGS)
 
-libbmp.o: libbmp.cpp libbmp.h
-	g++  libbmp.cpp -o libbmp.o -O1 -c
+libbmp.o: libbmp.cpp
+	g++ libbmp.cpp -o libbmp.o -c $(FLAGS)
 
-DAISGram.o: DAISGram.h
-	g++ DAISGram.h -o DAISGram.o -O1 -c $(FLAGS)
+DAISGram.o: DAISGram.cpp libbmp.o
+	g++ DAISGram.cpp -o DAISGram.o -c $(FLAGS)
 
-main: main.cpp tensor.o DAISGram.o libbmp.o
-	g++ main.cpp -o $(MAIN) -O1 $(FLAGS)
+main: tensor.o DAISGram.o libbmp.o main.cpp 
+	g++ libbmp.o tensor.o DAISGram.o main.cpp -o $(MAIN) $(FLAGS)
 
 testbmp: test_bmplib.cpp libbmp.o
-	g++ libbmp.o test_bmplib.cpp -o test_bmplib -O1 $(FLAGS)
+	g++ libbmp.o test_bmplib.cpp -o test_bmplib $(FLAGS)
+
+main_tensor: tensor.o main_tensor.cpp 
+	g++ tensor.o main_tensor.cpp -o main_tensor $(FLAGS)
 
 clean:
-	rm $(MAIN) *.o
+	rm $(MAIN) *.o 
