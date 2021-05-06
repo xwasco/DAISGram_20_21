@@ -19,7 +19,7 @@ class Tensor
 {
 private:
 
-    float * data = nullptr; //<-- you are free to change this data structure (don't use vectors)
+    float * data = nullptr; //<-- you are free to change this data structure (don't use vectors or array)
 
     int r = 0;  // number of rows
     int c = 0;  // number of columns
