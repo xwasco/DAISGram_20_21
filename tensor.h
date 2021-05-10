@@ -425,6 +425,7 @@ public:
      * data(3,1,1)
      * data(3,2,1)
      * 
+     * @param filename the filename where the tensor should be stored
      */
     void write_file(string filename);
 
