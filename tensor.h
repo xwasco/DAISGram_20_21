@@ -230,7 +230,9 @@ public:
      * 
      * where max(k) and min(k) are the maximum and minimum value in the k-th channel.
      * 
-     * new_max is the new value for the maximum
+     * new_max is the new maximum value for each channel
+     * 
+     * - if max(k) and min(k) are the same, then the entire k-th channel is set to new_max.
      * 
      * @param new_max New maximum vale
      */
