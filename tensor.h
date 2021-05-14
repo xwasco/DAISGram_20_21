@@ -115,7 +115,7 @@ public:
      * 
      * @return returns true if all their entries are "floating" equal
      */
-    bool Tensor::operator==(const Tensor& rhs) const;
+    bool operator==(const Tensor& rhs) const;
 
     /**
      * Operator overloading -
