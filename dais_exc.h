@@ -56,6 +56,12 @@ struct filter_odd_dimensions{
     /* Utilizzate questa eccezione se il filtro per la convoluzione NON ha dimensioni (altezza e largezza) dispari */
 };
 
+struct unknown_exception{
+    string msg = "An error occured";
+    string code = "-1";   
+    /* Utilizzate questa eccezione per qualsiasi tipo di problema non gestito da altre eccezioni */
+};
+
 
 #endif
 
